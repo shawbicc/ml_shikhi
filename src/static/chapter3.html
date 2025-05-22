@@ -126,7 +126,6 @@
             
             <!-- Story Content -->
             <div class="story-content">
-                <img src="images/chapter1.jpg" alt="Ancient book with data symbols" class="story-image">
                 <p data-i18n="chapter1_task">To unlock the book's knowledge, you must first understand how to read its language - the language of data.</p>
             </div>
             
@@ -137,15 +136,15 @@
 
                 <!-- CODE FILLUP ELEMENT -->
                 <div class="container3">
-                    <h2>🧪 Python Code Checker</h2>
-                    <p>Write a function to return the square of a number:</p>
-                    <textarea id="codeEditor" placeholder="def square(n):\n    return n * n"></textarea>
+                    <h2>Code Thyself</h2>
+                    <p>Write a function to calculate the mean square error between the predicted and actual values:</p>
+                    <textarea id="codeEditor" placeholder="def mean_squared_error(y_true, y_pred):"></textarea>
                     <button onclick="checkCode()">Check Code</button>
                     <div id="result" class="result" style="display: none;"></div>
                 </div>
 
                 <script>
-                    const referenceCode = `def square(n):\n    return n * n`;
+                    const referenceCode = `def mean_squared_error(y_true, y_pred):\n    errors = [(yt - yp) ** 2 for yt, yp in zip(y_true, y_pred)]\n    return sum(errors) / len(errors)`;
 
                     function normalizeCode(code) {
                     return code.trim().replace(/\r\n/g, '\n');
@@ -226,7 +225,6 @@
             <div class="resource-cards">
                 <!-- Resource 1 -->
                 <div class="resource-card">
-                    <img src="images/resource_basics.jpg" alt="ML Fundamentals">
                     <div class="resource-card-content">
                         <h3 data-i18n="resource_basics">ML Fundamentals</h3>
                         <p>Learn the basic concepts and terminology of machine learning.</p>
@@ -236,7 +234,6 @@
                 
                 <!-- Resource 2 -->
                 <div class="resource-card">
-                    <img src="images/resource_preprocessing.jpg" alt="Data Preprocessing">
                     <div class="resource-card-content">
                         <h3 data-i18n="resource_preprocessing">Data Preprocessing</h3>
                         <p>Discover techniques for cleaning and preparing your data.</p>
@@ -246,7 +243,6 @@
                 
                 <!-- Resource 3 -->
                 <div class="resource-card">
-                    <img src="images/resource_decision_trees.jpg" alt="Decision Trees">
                     <div class="resource-card-content">
                         <h3 data-i18n="resource_decision_trees">Decision Trees</h3>
                         <p>Understand how decision trees work and when to use them.</p>
