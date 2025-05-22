@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="app_name">ML Shikhi</title>
+    <title data-i18n="app_name">ML Explorer's Journey</title>
     <meta name="description" content="Learn Machine Learning through storytelling and interactive puzzles">
     <link rel="stylesheet" href="css/main.css">
     <!-- Google Fonts -->
@@ -22,7 +22,7 @@
         <div class="container header-container">
             <div class="logo">
                 <img src="images/logo.png" alt="ML Explorer Logo">
-                <h1 data-i18n="app_name">ML Shikhi</h1>
+                <h1 data-i18n="app_name">ML Explorer's Journey</h1>
             </div>
             <nav>
                 <ul>
@@ -42,7 +42,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 data-i18n="app_name">ML Shikhi</h1>
+            <h1 data-i18n="app_name">ML Explorer's Journey</h1>
             <p data-i18n="tagline">Learn Machine Learning through an epic adventure</p>
             <div class="hero-buttons">
                 <button class="btn" id="start-journey" data-i18n="start_journey">Start Your Journey</button>
@@ -67,12 +67,12 @@
                 </div>
                 
                 <!-- Chapter 2 -->
-                <div class="chapter-card status-locked">
-                    <a href="chapter2.html"><h3 data-i18n="chapter2_title">The Patterns in Numbers</h3></a>
+                <div class="chapter-card status-available">
+                    <h3 data-i18n="chapter2_title">The Patterns in Numbers</h3>
                     <p data-i18n="chapter2_intro">The second chapter of the ancient book reveals itself, showing intricate patterns connecting numbers and outcomes.</p>
                     <div class="status">
                         <div class="status-icon"></div>
-                        <span data-i18n="locked">Locked</span>
+                        <span data-i18n="available">Available</span>
                     </div>
                 </div>
                 
@@ -132,113 +132,88 @@
             
             <!-- Code Puzzle -->
             <div class="code-puzzle">
-                <h3 data-i18n="chapter1_puzzle_title">Identifying Features and Labels</h3>
-                <p data-i18n="chapter1_puzzle_description">Complete the code to identify features and labels in this dataset about magical creatures.</p>
-                
-                <div class="code-editor" id="code-editor">
-                    <div class="code-line">
-                        <span class="line-number">1</span>
-                        <span class="code-text">import pandas as pd</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">2</span>
-                        <span class="code-text">import numpy as np</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">3</span>
-                        <span class="code-text">import matplotlib.pyplot as plt</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">4</span>
-                        <span class="code-text"></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">5</span>
-                        <span class="code-text"># Load the magical creatures dataset</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">6</span>
-                        <span class="code-text">df = pd.read_csv('magical_creatures.csv')</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">7</span>
-                        <span class="code-text"></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">8</span>
-                        <span class="code-text"># Extract features (X) and label (y)</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">9</span>
-                        <span class="code-text">X = <span class="code-input" contenteditable="true" data-answer="df.drop('creature_type', axis=1)">_______</span></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">10</span>
-                        <span class="code-text">y = <span class="code-input" contenteditable="true" data-answer="df['creature_type']">_______</span></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">11</span>
-                        <span class="code-text"></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">12</span>
-                        <span class="code-text"># Display the first few rows of features</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">13</span>
-                        <span class="code-text">print("Features (X):")</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">14</span>
-                        <span class="code-text">print(<span class="code-input" contenteditable="true" data-answer="X.head()">_______</span>)</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">15</span>
-                        <span class="code-text"></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">16</span>
-                        <span class="code-text"># Display the first few labels</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">17</span>
-                        <span class="code-text">print("Labels (y):")</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">18</span>
-                        <span class="code-text">print(<span class="code-input" contenteditable="true" data-answer="y.head()">_______</span>)</span>
-                    </div>
+                <h3 data-i18n="chapter1_puzzle_title">Reorganize your code</h3>
+                <p data-i18n="chapter1_puzzle_description">Sort the code blocks in the correct order</p>
+
+                <!-- CODE FILLUP ELEMENT -->
+                <div class="container3">
+                    <h2>🧪 Python Code Checker</h2>
+                    <p>Write a function to return the square of a number:</p>
+                    <textarea id="codeEditor" placeholder="def square(n):\n    return n * n"></textarea>
+                    <button onclick="checkCode()">Check Code</button>
+                    <div id="result" class="result" style="display: none;"></div>
                 </div>
-                
-                <div class="puzzle-controls">
-                    <button class="btn" id="run-code" data-i18n="run_code">Run Code</button>
-                    <button class="btn" id="check-answer" data-i18n="check_answer">Check Answer</button>
-                    <button class="btn btn-secondary" id="hint" data-i18n="hint">Get Hint</button>
-                    <button class="btn btn-secondary" id="reset" data-i18n="reset">Reset</button>
-                </div>
+
+                <script>
+                    const referenceCode = `def square(n):\n    return n * n`;
+
+                    function normalizeCode(code) {
+                    return code.trim().replace(/\r\n/g, '\n');
+                    }
+
+                    function checkCode() {
+                    const userCode = document.getElementById('codeEditor').value;
+                    const resultDiv = document.getElementById('result');
+                    if (normalizeCode(userCode) === normalizeCode(referenceCode)) {
+                        resultDiv.textContent = "✅ Correct! Well done.";
+                        resultDiv.className = "result success";
+                    } else {
+                        resultDiv.textContent = "❌ Incorrect. Try again!";
+                        resultDiv.className = "result error";
+                    }
+                    resultDiv.style.display = "block";
+                    }
+
+                    const textarea = document.getElementById('codeEditor');
+
+                    textarea.addEventListener('paste', function(event) {
+                        event.preventDefault();
+                        alert("Pasting is disabled in this area.");
+                    });
+                </script>
+                <style>
+
+                    .container3 {
+                    max-width: 700px;
+                    margin: auto;
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 12px;
+                    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+                    }
+
+                    textarea {
+                    width: 100%;
+                    height: 250px;
+                    font-family: monospace;
+                    font-size: 14px;
+                    padding: 1rem;
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    resize: vertical;
+                    background-color: #f3f4f6;
+                    }
+
+                    .result {
+                    margin-top: 1rem;
+                    padding: 0.75rem;
+                    border-radius: 6px;
+                    }
+
+                    .success {
+                    background-color: #d1fae5;
+                    color: #065f46;
+                    }
+
+                    .error {
+                    background-color: #fee2e2;
+                    color: #991b1b;
+                    }
+                </style>
+   
+
             </div>
 
-            
-            <!-- Results and Visualization -->
-            <div class="results" id="results">
-                <h3>Results</h3>
-                <div class="visualization" id="visualization">
-                    <!-- Visualization will be displayed here -->
-                </div>
-                <div class="output" id="code-output">
-                    <!-- Code output will be displayed here -->
-                </div>
-                <div class="score-display" id="score-display">
-                    <span data-i18n="score">Score</span>: 
-                    <div class="score-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">☆</span>
-                        <span class="star">☆</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -309,7 +284,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3 data-i18n="app_name">ML Shikhi</h3>
+                    <h3 data-i18n="app_name">ML Explorer's Journey</h3>
                     <p>An interactive learning platform for high school students to learn machine learning through storytelling.</p>
                 </div>
                 <div class="footer-column">
@@ -332,7 +307,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p data-i18n="copyright">© 2025 ML Shikhi. All rights reserved.</p>
+                <p data-i18n="copyright">© 2025 ML Explorer's Journey. All rights reserved.</p>
             </div>
         </div>
     </footer>

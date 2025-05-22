@@ -67,18 +67,18 @@
                 </div>
                 
                 <!-- Chapter 2 -->
-                <div class="chapter-card status-locked">
-                    <a href="chapter2.html"><h3 data-i18n="chapter2_title">The Patterns in Numbers</h3></a>
+                <div class="chapter-card status-available">
+                    <h3 data-i18n="chapter2_title">The Patterns in Numbers</h3>
                     <p data-i18n="chapter2_intro">The second chapter of the ancient book reveals itself, showing intricate patterns connecting numbers and outcomes.</p>
                     <div class="status">
                         <div class="status-icon"></div>
-                        <span data-i18n="locked">Locked</span>
+                        <span data-i18n="available">Available</span>
                     </div>
                 </div>
                 
                 <!-- Chapter 3 -->
                 <div class="chapter-card status-locked">
-                    <h3 data-i18n="chapter3_title">The Decision Trees of Knowledge</h3>
+                    <a href="chapter3.html"><h3 data-i18n="chapter3_title">The Decision Trees of Knowledge</h3></a>
                     <p data-i18n="chapter3_intro">The book transports your mind to a magical forest where trees make decisions based on features of objects passing through.</p>
                     <div class="status">
                         <div class="status-icon"></div>
@@ -132,113 +132,122 @@
             
             <!-- Code Puzzle -->
             <div class="code-puzzle">
-                <h3 data-i18n="chapter1_puzzle_title">Identifying Features and Labels</h3>
-                <p data-i18n="chapter1_puzzle_description">Complete the code to identify features and labels in this dataset about magical creatures.</p>
+                <h3 data-i18n="chapter1_puzzle_title">Reorganize your code</h3>
+                <p data-i18n="chapter1_puzzle_description">Sort the code blocks in the correct order</p>
+
+                <!-- DRAG AND MATCH ELEMENT -->
+                <style>
+                    .container2 {
+                    /* max-width: 500px; */
+                    margin: auto;
+                    background: white;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                    }
+
+                    .draggable {
+                    padding: 10px;
+                    margin: 8px 0;
+                    background: #e0e7ff;
+                    border: 1px solid #6366f1;
+                    border-radius: 5px;
+                    cursor: grab;
+                    transition: transform 0.25s ease, box-shadow 0.25s ease;
+                    user-select: none;
+                    }
+
+                    .draggable:active {
+                    cursor: grabbing;
+                    }
+
+                    .dragging {
+                    opacity: 0.5;
+                    transform: scale(1.03);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .correct {
+                    background: #d1fae5;
+                    }
+
+                    .incorrect {
+                    background: #fee2e2;
+                    }
+                </style>
                 
-                <div class="code-editor" id="code-editor">
-                    <div class="code-line">
-                        <span class="line-number">1</span>
-                        <span class="code-text">import pandas as pd</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">2</span>
-                        <span class="code-text">import numpy as np</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">3</span>
-                        <span class="code-text">import matplotlib.pyplot as plt</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">4</span>
-                        <span class="code-text"></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">5</span>
-                        <span class="code-text"># Load the magical creatures dataset</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">6</span>
-                        <span class="code-text">df = pd.read_csv('magical_creatures.csv')</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">7</span>
-                        <span class="code-text"></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">8</span>
-                        <span class="code-text"># Extract features (X) and label (y)</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">9</span>
-                        <span class="code-text">X = <span class="code-input" contenteditable="true" data-answer="df.drop('creature_type', axis=1)">_______</span></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">10</span>
-                        <span class="code-text">y = <span class="code-input" contenteditable="true" data-answer="df['creature_type']">_______</span></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">11</span>
-                        <span class="code-text"></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">12</span>
-                        <span class="code-text"># Display the first few rows of features</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">13</span>
-                        <span class="code-text">print("Features (X):")</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">14</span>
-                        <span class="code-text">print(<span class="code-input" contenteditable="true" data-answer="X.head()">_______</span>)</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">15</span>
-                        <span class="code-text"></span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">16</span>
-                        <span class="code-text"># Display the first few labels</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">17</span>
-                        <span class="code-text">print("Labels (y):")</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="line-number">18</span>
-                        <span class="code-text">print(<span class="code-input" contenteditable="true" data-answer="y.head()">_______</span>)</span>
-                    </div>
+                <div class="container2">
+                    <div id="code-list" class="droppable"></div>
+                    <button onclick="checkOrder()">Check Answer</button>
                 </div>
-                
-                <div class="puzzle-controls">
-                    <button class="btn" id="run-code" data-i18n="run_code">Run Code</button>
-                    <button class="btn" id="check-answer" data-i18n="check_answer">Check Answer</button>
-                    <button class="btn btn-secondary" id="hint" data-i18n="hint">Get Hint</button>
-                    <button class="btn btn-secondary" id="reset" data-i18n="reset">Reset</button>
-                </div>
+                <script>
+                    const correctOrder = [
+                        "import pandas as pd",
+                        "df = pd.read_csv('creatures.csv')",
+                        "print(df.head())"
+                    ];
+
+                    let shuffledOrder = [...correctOrder].sort(() => Math.random() - 0.5);
+                    const container = document.getElementById("code-list");
+
+                    let dragSrcEl = null;
+
+                    function renderList(items) {
+                        container.innerHTML = "";
+                        items.forEach((line, index) => {
+                        const div = document.createElement("div");
+                        div.className = "draggable";
+                        div.draggable = true;
+                        div.textContent = line;
+                        div.dataset.index = index;
+
+                        div.addEventListener("dragstart", (e) => {
+                            dragSrcEl = e.target;
+                            e.dataTransfer.effectAllowed = "move";
+                            e.dataTransfer.setData("text/plain", index);
+                            e.target.classList.add("dragging");
+                        });
+
+                        div.addEventListener("dragend", (e) => {
+                            e.target.classList.remove("dragging");
+                        });
+
+                        div.addEventListener("dragover", (e) => {
+                            e.preventDefault();
+                            e.dataTransfer.dropEffect = "move";
+                        });
+
+                        div.addEventListener("drop", (e) => {
+                            e.preventDefault();
+                            const fromIndex = parseInt(e.dataTransfer.getData("text"));
+                            const toIndex = parseInt(e.target.dataset.index);
+                            [shuffledOrder[fromIndex], shuffledOrder[toIndex]] = [shuffledOrder[toIndex], shuffledOrder[fromIndex]];
+                            renderList(shuffledOrder);
+                        });
+
+                        container.appendChild(div);
+                        });
+                    }
+
+                    function checkOrder() {
+                        const items = container.querySelectorAll(".draggable");
+                        items.forEach((el, i) => {
+                        if (el.textContent.trim() === correctOrder[i]) {
+                            el.classList.add("correct");
+                            el.classList.remove("incorrect");
+                        } else {
+                            el.classList.add("incorrect");
+                            el.classList.remove("correct");
+                        }
+                        });
+                    }
+
+                    renderList(shuffledOrder);
+                </script>
+
+
             </div>
 
-            
-            <!-- Results and Visualization -->
-            <div class="results" id="results">
-                <h3>Results</h3>
-                <div class="visualization" id="visualization">
-                    <!-- Visualization will be displayed here -->
-                </div>
-                <div class="output" id="code-output">
-                    <!-- Code output will be displayed here -->
-                </div>
-                <div class="score-display" id="score-display">
-                    <span data-i18n="score">Score</span>: 
-                    <div class="score-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">☆</span>
-                        <span class="star">☆</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
