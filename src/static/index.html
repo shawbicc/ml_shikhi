@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="app_name">ML Explorer's Journey</title>
+    <meta name="description" content="Learn Machine Learning through storytelling and interactive puzzles">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Fira+Code:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4a6fa5">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="ML Explorer Logo">
+                <h1 data-i18n="app_name">ML Explorer's Journey</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" data-i18n="resources">Learning Resources</a></li>
+                    <li><a href="#" data-i18n="about">About</a></li>
+                    <li><a href="#" data-i18n="settings">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <span data-i18n="language">Language</span>
+                <button class="language-btn active" data-lang="en">English</button>
+                <button class="language-btn" data-lang="bn">বাংলা</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 data-i18n="app_name">ML Explorer's Journey</h1>
+            <p data-i18n="tagline">Learn Machine Learning through an epic adventure</p>
+            <div class="hero-buttons">
+                <button class="btn" id="start-journey" data-i18n="start_journey">Start Your Journey</button>
+                <button class="btn btn-secondary" id="continue-journey" data-i18n="continue_journey">Continue Journey</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Map -->
+    <section class="story-map">
+        <div class="container">
+            <h2 class="text-center mb-3" data-i18n="progress">Progress</h2>
+            <div class="chapters">
+                <!-- Chapter 1 -->
+                <div class="chapter-card status-available">
+                    <h3 data-i18n="chapter1_title">The Fundamentals of Data</h3>
+                    <p data-i18n="chapter1_intro">You've discovered an ancient book containing the secrets of Machine Learning. The first chapter glows with mysterious symbols that seem to represent data patterns.</p>
+                    <div class="status">
+                        <div class="status-icon"></div>
+                        <span data-i18n="available">Available</span>
+                    </div>
+                </div>
+                
+                <!-- Chapter 2 -->
+                <div class="chapter-card status-locked">
+                    <h3 data-i18n="chapter2_title">The Patterns in Numbers</h3>
+                    <p data-i18n="chapter2_intro">The second chapter of the ancient book reveals itself, showing intricate patterns connecting numbers and outcomes.</p>
+                    <div class="status">
+                        <div class="status-icon"></div>
+                        <span data-i18n="locked">Locked</span>
+                    </div>
+                </div>
+                
+                <!-- Chapter 3 -->
+                <div class="chapter-card status-locked">
+                    <h3 data-i18n="chapter3_title">The Decision Trees of Knowledge</h3>
+                    <p data-i18n="chapter3_intro">The book transports your mind to a magical forest where trees make decisions based on features of objects passing through.</p>
+                    <div class="status">
+                        <div class="status-icon"></div>
+                        <span data-i18n="locked">Locked</span>
+                    </div>
+                </div>
+                
+                <!-- Chapter 4 -->
+                <div class="chapter-card status-locked">
+                    <h3 data-i18n="chapter4_title">The Linear Path</h3>
+                    <p data-i18n="chapter4_intro">You encounter a bridge that adjusts its path to reach different islands. The book shows you how to predict where the bridge will lead.</p>
+                    <div class="status">
+                        <div class="status-icon"></div>
+                        <span data-i18n="locked">Locked</span>
+                    </div>
+                </div>
+                
+                <!-- Chapter 5 -->
+                <div class="chapter-card status-locked">
+                    <h3 data-i18n="chapter5_title">The Neural Network Maze</h3>
+                    <p data-i18n="chapter5_intro">The book reveals a complex maze with interconnected paths, mimicking the structure of neural networks in the brain.</p>
+                    <div class="status">
+                        <div class="status-icon"></div>
+                        <span data-i18n="locked">Locked</span>
+                    </div>
+                </div>
+                
+                <!-- Chapter 6 -->
+                <div class="chapter-card status-locked">
+                    <h3 data-i18n="chapter6_title">The Final Challenge</h3>
+                    <p data-i18n="chapter6_intro">You've reached the final chapter of the ancient book. Now you must apply all your knowledge to solve a complex problem.</p>
+                    <div class="status">
+                        <div class="status-icon"></div>
+                        <span data-i18n="locked">Locked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Area -->
+    <section class="learning-area" id="learning-area">
+        <div class="container">
+            <h2 data-i18n="chapter1_title">The Fundamentals of Data</h2>
+            
+            <!-- Story Content -->
+            <div class="story-content">
+                <img src="images/chapter1.jpg" alt="Ancient book with data symbols" class="story-image">
+                <p data-i18n="chapter1_task">To unlock the book's knowledge, you must first understand how to read its language - the language of data.</p>
+            </div>
+            
+            <!-- Code Puzzle -->
+            <div class="code-puzzle">
+                <h3 data-i18n="chapter1_puzzle_title">Identifying Features and Labels</h3>
+                <p data-i18n="chapter1_puzzle_description">Complete the code to identify features and labels in this dataset about magical creatures.</p>
+                
+                <div class="code-editor" id="code-editor">
+                    <div class="code-line">
+                        <span class="line-number">1</span>
+                        <span class="code-text">import pandas as pd</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">2</span>
+                        <span class="code-text">import numpy as np</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">3</span>
+                        <span class="code-text">import matplotlib.pyplot as plt</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">4</span>
+                        <span class="code-text"></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">5</span>
+                        <span class="code-text"># Load the magical creatures dataset</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">6</span>
+                        <span class="code-text">df = pd.read_csv('magical_creatures.csv')</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">7</span>
+                        <span class="code-text"></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">8</span>
+                        <span class="code-text"># Extract features (X) and label (y)</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">9</span>
+                        <span class="code-text">X = <span class="code-input" contenteditable="true" data-answer="df.drop('creature_type', axis=1)">_______</span></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">10</span>
+                        <span class="code-text">y = <span class="code-input" contenteditable="true" data-answer="df['creature_type']">_______</span></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">11</span>
+                        <span class="code-text"></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">12</span>
+                        <span class="code-text"># Display the first few rows of features</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">13</span>
+                        <span class="code-text">print("Features (X):")</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">14</span>
+                        <span class="code-text">print(<span class="code-input" contenteditable="true" data-answer="X.head()">_______</span>)</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">15</span>
+                        <span class="code-text"></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">16</span>
+                        <span class="code-text"># Display the first few labels</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">17</span>
+                        <span class="code-text">print("Labels (y):")</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">18</span>
+                        <span class="code-text">print(<span class="code-input" contenteditable="true" data-answer="y.head()">_______</span>)</span>
+                    </div>
+                </div>
+                
+                <div class="puzzle-controls">
+                    <button class="btn" id="run-code" data-i18n="run_code">Run Code</button>
+                    <button class="btn" id="check-answer" data-i18n="check_answer">Check Answer</button>
+                    <button class="btn btn-secondary" id="hint" data-i18n="hint">Get Hint</button>
+                    <button class="btn btn-secondary" id="reset" data-i18n="reset">Reset</button>
+                </div>
+            </div>
+            
+            <!-- Results and Visualization -->
+            <div class="results" id="results">
+                <h3>Results</h3>
+                <div class="visualization" id="visualization">
+                    <!-- Visualization will be displayed here -->
+                </div>
+                <div class="output" id="code-output">
+                    <!-- Code output will be displayed here -->
+                </div>
+                <div class="score-display" id="score-display">
+                    <span data-i18n="score">Score</span>: 
+                    <div class="score-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">☆</span>
+                        <span class="star">☆</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources">
+        <div class="container">
+            <h2 class="text-center mb-3" data-i18n="resources_title">ML Explorer's Library</h2>
+            <p class="text-center mb-4" data-i18n="resources_description">Expand your knowledge with these valuable resources on machine learning concepts.</p>
+            
+            <div class="resource-cards">
+                <!-- Resource 1 -->
+                <div class="resource-card">
+                    <img src="images/resource_basics.jpg" alt="ML Fundamentals">
+                    <div class="resource-card-content">
+                        <h3 data-i18n="resource_basics">ML Fundamentals</h3>
+                        <p>Learn the basic concepts and terminology of machine learning.</p>
+                        <a href="#" class="btn">View Resource</a>
+                    </div>
+                </div>
+                
+                <!-- Resource 2 -->
+                <div class="resource-card">
+                    <img src="images/resource_preprocessing.jpg" alt="Data Preprocessing">
+                    <div class="resource-card-content">
+                        <h3 data-i18n="resource_preprocessing">Data Preprocessing</h3>
+                        <p>Discover techniques for cleaning and preparing your data.</p>
+                        <a href="#" class="btn">View Resource</a>
+                    </div>
+                </div>
+                
+                <!-- Resource 3 -->
+                <div class="resource-card">
+                    <img src="images/resource_decision_trees.jpg" alt="Decision Trees">
+                    <div class="resource-card-content">
+                        <h3 data-i18n="resource_decision_trees">Decision Trees</h3>
+                        <p>Understand how decision trees work and when to use them.</p>
+                        <a href="#" class="btn">View Resource</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant">
+        <div class="assistant-toggle" id="assistant-toggle">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="assistant-panel" id="assistant-panel">
+            <div class="assistant-header">
+                <i class="fas fa-robot"></i>
+                <h3 data-i18n="assistant_name">ML Mentor</h3>
+            </div>
+            <div class="assistant-messages" id="assistant-messages">
+                <div class="message assistant">
+                    <p data-i18n="assistant_greeting">Hello! I'm your ML Mentor. Need help with machine learning concepts or code puzzles? Just ask!</p>
+                </div>
+            </div>
+            <div class="assistant-input">
+                <input type="text" id="assistant-input" data-i18n-placeholder="assistant_placeholder" placeholder="Ask for help...">
+                <button class="btn" id="assistant-send" data-i18n="assistant_send">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-i18n="app_name">ML Explorer's Journey</h3>
+                    <p>An interactive learning platform for high school students to learn machine learning through storytelling.</p>
+                </div>
+                <div class="footer-column">
+                    <h3 data-i18n="footer_about">About ML Explorer</h3>
+                    <ul>
+                        <li><a href="#" data-i18n="about">About</a></li>
+                        <li><a href="#" data-i18n="footer_contact">Contact Us</a></li>
+                        <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-i18n="footer_terms">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-i18n="resources">Learning Resources</h3>
+                    <ul>
+                        <li><a href="#" data-i18n="resource_basics">ML Fundamentals</a></li>
+                        <li><a href="#" data-i18n="resource_preprocessing">Data Preprocessing</a></li>
+                        <li><a href="#" data-i18n="resource_decision_trees">Decision Trees</a></li>
+                        <li><a href="#" data-i18n="resource_regression">Linear Regression</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p data-i18n="copyright">© 2025 ML Explorer's Journey. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Offline Mode Notification -->
+    <div class="offline-notification hidden" id="offline-notification">
+        <div class="container">
+            <p><i class="fas fa-wifi-slash"></i> <span data-i18n="offline_active">You are currently using the app in offline mode.</span></p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/code-editor.js"></script>
+    <script src="js/ai-assistant.js"></script>
+    <script src="js/offline.js"></script>
+</body>
+</html>
